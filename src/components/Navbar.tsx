@@ -41,9 +41,14 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button size="sm" className="bg-primary hover:bg-primary/90">
-              Contato
-            </Button>
+            <Link to="/contato">
+              <Button size="sm" className="bg-primary hover:bg-primary/90">
+                Contato
+              </Button>
+            </Link>
+            <Link to="/login" className="text-sm font-medium text-foreground hover:text-primary">
+              Login
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -73,9 +78,16 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="px-4 pt-2">
-              <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
-                Contato
-              </Button>
+              <Link to="/contato">
+                <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
+                  Contato
+                </Button>
+              </Link>
+            </div>
+            <div className="px-4">
+              <Link to="/login" onClick={() => setIsOpen(false)} className="block px-4 py-2 rounded-lg text-sm font-medium">
+                Login
+              </Link>
             </div>
           </div>
         )}
